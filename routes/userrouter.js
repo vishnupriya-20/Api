@@ -79,8 +79,8 @@ router.delete('/:id',(req,res,next)=>
 })
 
 router.post('/delete', (req,res) => {
-    console.log('body', req)
-    service.deleteuser(req.body,function(err, data) {
+    console.log('body', req.body)
+    service.deleteuser(req.body,(err, data) {
         if(!err) {
             var status = {
                 info: 'user deleted',
